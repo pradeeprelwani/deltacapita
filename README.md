@@ -1,2 +1,1 @@
-# deltacapita
-Nodejs/TypeScript assginment
+# node-ts

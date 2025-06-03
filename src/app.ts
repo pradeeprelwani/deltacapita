@@ -1,0 +1,21 @@
+import express, { Request, Response } from 'express';
+import { TestController } from "./controller/TestController"
+const app = express();
+const port = process.env.PORT || 3000;
+
+app.get('/test', (req: Request, res: Response) => {
+  const controller = new TestController()
+  const shoppingBasket1 = ["Apple", "Apple", "Banana", "Melon", "Melon", "Melon", "Lime", "Lime", "Lime", "Lime"];
+  const shoppingBasket2 = ["Apple", "Apple", "Banana", "Melon", "Melon", "Lime", "Lime", "Lime", "Lime", "Lime"];
+  const shoppingBasket3 = ["Apple", "Apple", "Apple", "Banana", "Banana", "Banana", "Melon", "Melon", "Lime", "Lime", "Lime", "Lime"];
+  res.json({
+    shoppingBasket1: controller.calculateBasket(shoppingBasket1),
+    shoppingBasket2: controller.calculateBasket(shoppingBasket2),
+    shoppingBasket3: controller.calculateBasket(shoppingBasket3),
+  })
+
+});
+
+app.listen(port, () => {
+  console.log(`Server running at http://localhost:${port}`);
+});

@@ -1,0 +1,26 @@
+{
+  "name": "app-node",
+  "version": "1.0.0",
+  "main": "dist/app.js",
+  "scripts": {
+    "build": "npx tsc",
+    "start": "npm run build && nodemon dist/app.js",
+    "dev": "nodemon src/app.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.13.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2",
+    "webpack": "^5.98.0",
+    "webpack-cli": "^6.0.1"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "nodemon": "^3.1.9",
+    "ts-loader": "^9.5.2"
+  }
+}

@@ -1,0 +1,2 @@
+# deltacapita
+Nodejs/TypeScript assginment

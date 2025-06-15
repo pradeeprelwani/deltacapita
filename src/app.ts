@@ -1,10 +1,10 @@
 import express, { Request, Response } from 'express';
-import { TestController } from "./controller/TestController"
+import { BasketController } from './controller/BasketController';
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.get('/test', (req: Request, res: Response) => {
-  const controller = new TestController()
+app.get('/test', (_req: Request, res: Response) => {
+  const controller = new BasketController()
   const shoppingBasket1 = ["Apple", "Apple", "Banana", "Melon", "Melon", "Melon", "Lime", "Lime", "Lime", "Lime"];
   const shoppingBasket2 = ["Apple", "Apple", "Banana", "Melon", "Melon", "Lime", "Lime", "Lime", "Lime", "Lime"];
   const shoppingBasket3 = ["Apple", "Apple", "Apple", "Banana", "Banana", "Banana", "Melon", "Melon", "Lime", "Lime", "Lime", "Lime"];
@@ -13,7 +13,6 @@ app.get('/test', (req: Request, res: Response) => {
     shoppingBasket2: controller.calculateBasket(shoppingBasket2),
     shoppingBasket3: controller.calculateBasket(shoppingBasket3),
   })
-
 });
 
 app.listen(port, () => {

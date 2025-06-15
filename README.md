@@ -24,5 +24,6 @@ Given a list of shopping, calculate the total cost of those items.
 - Install packages: `npm i`
 - Make build: `npm run build` or
 - Run application:  `npm start` or `npm run start`
+- Run test case:  `npm test` or `npm run test`
 - Run url on browser: `http://localhost:3000/test`
  

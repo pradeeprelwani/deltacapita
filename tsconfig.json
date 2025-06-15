@@ -1,19 +1,17 @@
 {
   "compilerOptions": {
     "target": "ES6",
-    "module": "CommonJS",
-    "outDir": "./dist", // Set the output directory to dist
-    "rootDir": "./src",
-    "esModuleInterop": true,
-    "moduleResolution": "node",
+    "module": "commonjs",
     "strict": true,
-    "skipLibCheck": true,
-    "allowJs": true
+    "esModuleInterop": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "types": [
+      "jest"
+    ]
   },
   "include": [
-    "src/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules"
+    "src",
+    "tests"
   ]
 }

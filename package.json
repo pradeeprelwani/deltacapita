@@ -5,16 +5,20 @@
   "scripts": {
     "build": "npx tsc",
     "start": "npm run build && nodemon dist/app.js",
-    "dev": "nodemon src/app.ts"
+    "dev": "nodemon src/app.ts",
+    "test": "jest --coverage"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
     "@types/express": "^5.0.0",
+    "@types/jest": "^29.5.14",
     "@types/node": "^22.13.9",
+    "jest": "^30.0.0",
+    "ts-jest": "^29.4.0",
     "ts-node": "^10.9.2",
-    "typescript": "^5.8.2",
+    "typescript": "^5.8.3",
     "webpack": "^5.98.0",
     "webpack-cli": "^6.0.1"
   },
